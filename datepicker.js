@@ -67,7 +67,8 @@ class DatePicker extends Component {
         this.state.animatedHeight,
         {
           toValue: height,
-          duration: duration
+          duration: duration,
+          useNativeDriver: true
         }
       ).start();
     } else {
@@ -75,7 +76,8 @@ class DatePicker extends Component {
         this.state.animatedHeight,
         {
           toValue: 0,
-          duration: duration
+          duration: duration,
+          useNativeDriver: true
         }
       ).start(() => {
         this.setState({modalVisible: visible});
